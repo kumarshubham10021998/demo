@@ -106,7 +106,7 @@ const Header = () => {
 
       <div className={`submenu ${isSubmenuSticky ? "submenu-sticky" : ""} border`}>
         <Container fluid>
-          <Nav className="justify-content-center">
+          <Nav className=" responsive justify-content-center">
             <Nav.Link
               onClick={() => scrollToSection(allProductRef)}
               className={activeSection === "all-product" ? "active" : ""}
