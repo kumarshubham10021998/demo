@@ -1,0 +1,60 @@
+/* Submenu Styles */
+.submenu {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  position: relative;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Keep all submenu items in one row */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.submenu::-webkit-scrollbar {
+  display: none;
+}
+
+/* Sticky Submenu */
+.submenu-sticky {
+  position: fixed;
+  top: 0px; /* Adjust based on the height of your Navbar */
+  width: 100%;
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 2;
+}
+
+/* Submenu Items */
+.submenu .nav {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure items don't wrap to the next line */
+}
+
+.submenu a {
+  color: #343a40;
+  padding: 8px 16px;
+  white-space: nowrap; /* Prevent breaking of text in submenu items */
+}
+
+.submenu a.active {
+  color: #007bff;
+  font-weight: bold;
+  border-bottom: 2px solid #007bff;
+}
+
+/* Hide scrollbar but allow scrolling */
+.submenu {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.submenu::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .submenu-sticky {
+    top: 0px; /* Adjust the position for mobile */
+    z-index: 3;
+  }
+}
